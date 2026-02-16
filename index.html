@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Dhikr</title>
+</head>
+<body>
+    <h1>ذِكْرٌ</h1>
+    <p id="dhikrDisplay">سُبْحَانَ الله</p>
+    <button id="dhikrButton">Recite Dhikr</button>
+
+    <script>
+        const dhikrList = [
+            "سُبْحَانَ الله",
+            "الْحَمْدُ لله",
+            "اللهُ أَكْبَر",
+            "لَا إِلٰهَ إِلَّا الله",
+            "أَسْتَغْفِرُ الله"
+        ];
+
+        const button = document.getElementById("dhikrButton");
+        const display = document.getElementById("dhikrDisplay");
+
+        button.addEventListener("click", function() {
+            const randomIndex = Math.floor(Math.random() * dhikrList.length);
+            display.textContent = dhikrList[randomIndex];
+        });
+    </script>
+</body>
+</html>
